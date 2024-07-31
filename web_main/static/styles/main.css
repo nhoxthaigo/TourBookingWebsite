@@ -1,0 +1,1190 @@
+#loading-page
+{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfc;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 1; 
+    transition: visibility 0s, opacity 0.5s;
+}
+#loading-page.show
+{
+	visibility: visible;
+    opacity: 1;
+}
+#loading-logo
+{
+	width: 200px;
+    height: auto;
+	animation: zoom-in-out 1.5s infinite ease-in-out;; 
+}
+
+@keyframes zoom-in-out {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+}
+
+
+.box-w-lg {
+	max-width: 1110px;
+}
+
+.container {
+	min-width: 100%;
+	padding: 0;
+}
+.container-header {
+	width: 100%;
+	min-height: 120vh;
+	background-image: linear-gradient(rgba(77, 76, 76, 0.65), rgba(56, 56, 56, 0.65)),
+		url(/web_main/static/img/background/background.jpg);
+	
+	background-attachment: fixed;
+
+}
+.container .header {
+	height: auto;
+}
+.container .container-header .header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+.header-logo img {
+	cursor: pointer;
+	margin: 10px 80px;
+}
+.header-nav ul {
+	list-style-type: none;
+	width: 100%;
+	text-align: right;
+	padding-right: 60px;
+}
+.header-nav ul li {
+	position: relative;
+	display: inline-block;
+	margin: 10px 20px;
+}
+.header-nav ul li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, #7baccc 0%, #487cea 100%);
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+.header-nav ul li:hover::after {
+	transform: scaleX(1);
+}
+.header-nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-size: 18px;
+}
+
+
+.header-content {
+	margin-top: 10%;
+	margin-left: 80px;
+	max-width: 620px;
+	color: #fff;
+}
+
+.header-content h1 {
+	font-size: 70px;
+	font-weight: 600;
+	line-height: 85px;
+	margin-bottom: 25px;
+}
+.header-content form {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 30px;
+}
+.header-content .button {
+	font-size: 14px;
+	padding: 10px 30px;
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+	background: #487cea;
+	color: #fff;
+	font-weight: 500;
+	cursor: pointer;
+}
+.header-content input {
+	border: 0;
+	outline: 0;
+	width: 100%;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.container .bot-header {
+	min-width: 100%;
+	background-color: #487cea;
+	color: white;
+}
+.container .bot-header .bot-header-container {
+	margin: auto;
+	height: 180px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container .bot-header .bot-header-container .bot-items {
+	display: flex;
+	align-items: center;
+}
+.container .bot-header .bot-header-container .bot-items .icon {
+	height: 49px;
+	margin-right: 24px;
+	margin-bottom: 17px;
+}
+.container .bot-header .bot-header-container .des {
+	font-size: 14px;
+}
+.container .bot-header .bot-header-container .des .title {
+	font-weight: 700;
+}
+.container .bot-header .bot-header-container .des .sub {
+	color: #b9cdf3;
+	font-weight: 300;
+}
+.container .content {
+	position: relative;
+	background-color: #676e74;
+	min-width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url(../img/content-background/vn-trek.jpg) no-repeat center center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 900px;
+	background-attachment: fixed;
+}
+.container .content .content-head {
+	min-width: 100%;
+	height: 198px;
+	background-color: #3e4044;
+	opacity: 0.8;
+}
+.container .content .content-head .content-head-container {
+	margin: auto;
+	display: flex;
+	height: 198px;
+	color: white;
+	opacity: 0.8;
+	justify-content: space-between;
+	align-items: center;
+}
+.container .content .content-head .content-head-container .content-head-items {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.container .content .content-head .content-head-container .content-head-items label {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.container .content .content-head .content-head-container .content-head-items input {
+	width: 165px;
+	height: 50px;
+	outline: none;
+	background-color: #585d6b;
+	border: 2px solid #676e74;
+	padding-left: 10px;
+	color: white;
+	border-radius: 5px;
+}
+.container .content .content-head .content-head-container .content-head-items ::-moz-placeholder {
+	color: #ccd5e8;
+}
+.container .content .content-head .content-head-container .content-head-items ::placeholder {
+	color: #ccd5e8;
+}
+.container .content .content-head .content-head-container .content-head-items i {
+	color: #ccd5e8;
+	position: absolute;
+	top: 52px;
+	left: 139px;
+}
+.container .content .content-head .content-head-container .content-head-items .btn {
+	display: flex;
+	width: 165px;
+	height: 50px;
+	color: white;
+	background-color: #487cea;
+	border: none;
+	border-radius: 0%;
+	align-items: center;
+	justify-content: center;
+	padding: auto;
+	margin-top: 34px;
+	border-radius: 5px;
+}
+.container .content .popular-tour-packages {
+	margin-top: 80px;
+	margin-bottom: 17px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container .content .popular-tour-packages .title {
+	font-size: 36px;
+	font-weight: 400;
+	color: #ffffff;
+}
+.container .content .popular-tour-packages .view-all-tour {
+	color: #bdd4ff;
+	font-size: 15px;
+	font-style: italic;
+	cursor: pointer;
+}
+.container .content .popular-tour-packages .tour-packages-items {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 64px;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item {
+	width: 343px;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item1
+{
+	height: 228px;
+	background-image: url(../img/popular/Hawai-USA.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item2
+{
+	height: 228px;
+	background-image: url(../img/popular/sapa-vn.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item3
+{
+	height: 228px;
+	background-image: url(../img/popular/fuji-moutain-japan.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item4
+{
+	height: 228px;
+	background-image: url(../img/popular/HuangshanShi-AnhuiSheng-China.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item5
+{
+	height: 228px;
+	background-image: url(../img/popular/Ao\ Nang-Thailand.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item6
+{
+	height: 228px;
+	background-image: url(../img/popular/sydney-aus2.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item7
+{
+	height: 228px;
+	background-image: url(../img/popular/paris-french.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item8
+{
+	height: 228px;
+	background-image: url(../img/popular/Venedig-Venetien-talien.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .img-item9 {
+	height: 228px;
+	background-image: url(../img/popular/Dubai-UnitedArabEmirates.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .info-item {
+	min-height: 186px;
+	display: flex;
+	padding: 32px 25px 8px 25px;
+	background-color: #ffffff;
+	justify-content: space-between;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .info-item .info-item-des {
+	max-width: 218px;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.des-item-name {
+	font-weight: bold;
+	font-size: 15px;
+	color: black;
+	word-wrap: break-word;
+	word-break: break-word;
+	white-space: normal;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.des-item-duration {
+	font-size: 14px;
+	margin-top: 23px;
+	margin-bottom: 12px;
+	color: #8c8c8c;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.des-item-duration
+	span {
+	font-weight: 500;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.item-rating {
+	display: flex;
+	padding-bottom: 10px;
+	font-size: 11px;
+	align-items: center;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.item-rating
+	i {
+	color: #ffa127;
+}
+.container
+	.content
+	.popular-tour-packages
+	.tour-packages-items
+	.tour-packages-item
+	.info-item
+	.info-item-des
+	.item-rating
+	span {
+	margin-left: 10px;
+	color: #8c8c8c;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .info-item .info-item-price span {
+	font-size: 15px;
+	margin-bottom: 4px;
+	float: right;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item .info-item .info-item-price .price {
+	color: #4692e7;
+	font-size: 22px;
+	font-weight: 800;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item::before {
+	z-index: 1;
+	content: '50% OFF';
+	position: absolute;
+	top: 30px;
+	left: -20px;
+	background-color: #ff4d4d;
+	color: white;
+	padding: 5px 10px;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+}
+.container .content .popular-tour-packages .tour-packages-items .tour-packages-item::after {
+	content: '';
+	position: absolute;
+	left: -39px;
+	top: 61px;
+	border-style: solid;
+	border-width: 0px 21px 15px 19px;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-right-color: rgba(146, 71, 47, 0.87);
+}
+/* .container button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+} */
+.container #prevBtn {
+	left: 10px;
+}
+.container #nextBtn {
+	right: 10px;
+}
+.container .popular-destiantion {
+	height: 1000px;
+	background-color: #3e4044;
+} /*# sourceMappingURL=main.css.map */
+
+
+.tour-packages-items {
+    transition: transform 0.5s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Styles for Previous and Next Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;             /* Đảm bảo chiếm toàn bộ chiều rộng của khối cha */
+    max-width: 600px;        /* Điều chỉnh chiều rộng tối đa nếu cần */
+    margin: 20px auto;       /* Căn giữa container các nút */
+    padding: 0 20px;         /* Điều chỉnh padding nếu cần */
+}
+
+.button-pre,
+.button-next {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+
+
+
+.tour-packages-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.button-pre,
+.button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button-pre {
+	background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+	border-radius: 100px;
+	left:-10%;
+}
+
+
+.button-pre:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.button-next {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+	right: -10%;
+	border-radius: 100px;
+
+}
+
+.button-next:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.popular-tour-packages {
+    position: relative;
+}
+
+.dots-container {
+    position: absolute;
+	bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+	height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.dot.active {
+    background-color: #487cea;
+}
+
+.container .popular-destinations {
+	background-color: white;
+  }
+  .container .popular-destinations .container-popular-destinations {
+	display: flex;
+	align-items: center;
+	margin: auto;
+	height: 254px;
+  }
+  .container .popular-destinations .container-popular-destinations .info {
+	padding: 0;
+  }
+  .container .popular-destinations .container-popular-destinations .info .title {
+	display: flex;
+	font-size: 29px;
+	font-weight: 400;
+  }
+  .container .popular-destinations .container-popular-destinations .info .title i {
+	font-size: 30px;
+	margin-right: 16px;
+	color: #467fe7;
+  }
+  .container .popular-destinations .container-popular-destinations .info .sub {
+	margin-top: 14px;
+	line-height: 1.7;
+	font-weight: 300;
+	font-size: 15px;
+  }
+  .container .popular-destinations .container-popular-destinations .view-all-destinations {
+	display: flex;
+	padding: 0;
+	flex-direction: row-reverse;
+	color: #467fe7;
+	font-size: 15px;
+	font-style: italic;
+	cursor: pointer;
+	right: 0;
+  }
+
+
+  .container .area-destinations {
+	width: 100%;
+  }
+  .container .area-destinations .area-vn {
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+  }
+  .container .area-destinations .area-vn .area-list {
+	padding: 0;
+	background-color: white;
+  }
+  .container .area-destinations .area-vn .area-list .des {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 0 36px;
+	height: 400px;
+	color: white;
+	background-size: cover;
+	background-image: url(../img/content-background/vn-trek1.jpg);
+  }
+  .container .area-destinations .area-vn .area-list .des .des-container {
+	z-index: 1;
+	margin: 0 0;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-bottom: 30px;
+	justify-content: space-between;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  }
+  .container .area-destinations .area-vn .area-list .des .des-container i {
+	width: 10%;
+  }
+  .container .area-destinations .area-vn .area-list .des .des-container .quantity-tour {
+	width: 20%;
+	color: #4692e7;
+	font-weight: 300;
+	font-size: 15px;
+  }
+  .container .area-destinations .area-vn .area-list .des .des-container .province-name {
+	font-weight: 700;
+	font-size: 20px;
+	color: white;
+	width: 70%;
+  }
+  .container .area-destinations .area-vn .area-list .des::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	/* Phủ 30% chiều cao của hình ảnh */
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+	/* Tạo gradient mờ từ dưới lên */
+	pointer-events: none;
+	/* Để lớp phủ không ảnh hưởng đến các tương tác */
+  }
+  .container .area-destinations .area-vn .area-list:hover {
+	opacity: 0.7;
+	transition: 0.3s ease;
+  }
+  .container .area-destinations .area-vn .area-list:hover .des {
+	z-index: 2;
+	padding-bottom: 25px;
+	transition: 0.3s ease;
+  }
+  .container .area-destinations .area-vn .area-list:hover .des-container {
+	text-shadow: none;
+  }
+
+  .container .tours-activity .tours-activity-container {
+	margin: 72px auto;
+	display: flex;
+	justify-content: space-between;
+  }
+  .container .tours-activity .tours-activity-container .title {
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	line-height: 80px;
+	color: black;
+  }
+  .container .tours-activity .tours-activity-container .title i {
+	font-size: 18px;
+	color: #467fe7;
+	margin-right: 14px;
+  }
+  .container .tours-activity .tours-activity-container .title .text {
+	font-size: 28px;
+  }
+  .container .tours-activity .tours-activity-container .browse-tours-by-activity {
+	width: 500px;
+  }
+  .container .tours-activity .tours-activity-container .browse-tours-by-activity .list-tours-activity {
+	margin: 0;
+	width: 100%;
+	display: flex;
+  }
+  .container .tours-activity .tours-activity-container .browse-tours-by-activity .list-tours-activity .column-list-activity {
+	padding: 0;
+  }
+  .container .tours-activity .tours-activity-container .browse-tours-by-activity .list-tours-activity .column-list-activity .list-tour-item {
+	font-size: 15px;
+	color: #467fe7;
+	line-height: 40px;
+  }
+  .container .tours-activity .tours-activity-container .browse-tours-by-activity .list-tours-activity .column-list-activity .list-tour-item:hover {
+	color: #095bf4;
+	text-decoration: underline;
+	cursor: pointer;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe span {
+	color: #796d6d;
+	display: block;
+	margin-top: 8px;
+	margin-bottom: 22px;
+	padding-right: 134px;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .input-field {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .input-field input {
+	width: 100%;
+	font-size: 14px;
+	height: 51px;
+	border-radius: 50px;
+	border: none;
+	padding: 0 20px;
+	margin-right: 8px;
+	outline: none;
+	background-color: #f3f3f3;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .input-field .btn-subcribe {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 1px;
+	width: 138px;
+	height: 51px;
+	border-radius: 50px;
+	font-weight: 700;
+	background-color: #468ae7;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .social {
+	display: flex;
+	margin-right: 30%;
+	justify-content: space-between;
+  }
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .social .social-icon {
+	color: #aaaaaa;
+	transition: transform 0.3s;
+}
+
+  .container .tours-activity .tours-activity-container .newsletter .subcribe .social .social-icon:hover
+  {
+	transform: scale(1.2);
+	color:#007bff;
+    transition: transform 0.3s; 
+    cursor: pointer;
+  }
+
+
+  .container .banner {
+	background-image: url(../img/banner-background/banner_background.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+  }
+  .container .banner .banner-container-discount {
+	margin: auto;
+	padding: 99px 0;
+  }
+  .container .banner .banner-container-discount .col-discount {
+	padding: 0;
+  }
+  .container .banner .banner-container-discount .col-discount .discount {
+	font-size: 48px;
+	font-weight: 800;
+	color: white;
+  }
+  .container .banner .banner-container-discount .col-discount .discount .discount-percent {
+	color: #ffb43e;
+  }
+  .container .banner .banner-container-discount .col-discount .banner-text {
+	color: white;
+	padding: 30px 0;
+  }
+  .container .banner .banner-container-discount .col-discount .btn-banner {
+	font-size: 14px;
+	background: black;
+	color: white;
+	font-weight: 600;
+	padding: 16px 32px;
+	border-radius: 50px;
+  }
+  .container .travel-articles {
+	margin: auto;
+	padding: 64px 0;
+  }
+  .container .travel-articles .travel-articles-title {
+	display: flex;
+	justify-content: space-between;
+	line-height: 80px;
+	align-items: center;
+	color: black;
+  }
+  .container .travel-articles .travel-articles-title .title {
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 0px;
+	text-transform: none;
+  }
+  .container .travel-articles .travel-articles-title .title i {
+	color: #467fe7;
+	margin-right: 8px;
+  }
+  .container .travel-articles .travel-articles-title .read-all-articles {
+	color: #467fe7;
+	font-style: italic;
+  }
+  .container .travel-articles .travel-articles-items {
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item {
+	position: relative;
+	transition: opacity 0.3s ease;
+	width: 25%;
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item img {
+	width: 100%;
+	height: 300px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item .description {
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 2px 2px 8px rgb(0, 0, 0);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item:hover {
+	cursor: pointer;
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item:hover img {
+	transform: scale(1.002);
+	opacity: 0.9;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  .container .travel-articles .travel-articles-items .travel-articles-item:hover .description {
+	opacity: 1;
+  }
+
+  @keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.slide-in.reverse {
+    animation: slideInFromRight 0.5s forwards;
+}
+
+
+.slide-body
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 50vh;
+	background: #F1F4FD;
+	margin-bottom: 120px;
+}
+.slide-img
+{
+	max-width: 1120px;
+	width: 95%;
+}
+.slide-img .title
+{
+	font-size: 24px;
+    padding: 22px 0px;
+}
+.slide-img .title i
+{
+	color: #467fe7;
+	margin-right: 8px
+}
+
+.slide-wrapper .image-list
+{
+ display: grid;
+ grid-template-columns: repeat(10,1fr);
+ font-size: 0;
+ overflow-x: auto;
+ scrollbar-width: none;
+ margin-bottom: 30px;
+}
+
+.slide-wrapper .image-list::-webkit-scrollbar
+{
+	display: none;
+}
+
+.slide-wrapper .image-list .img-item
+{
+	width: 325px;
+	height: 400px;
+	object-fit: cover;
+	margin: 0px 1px;
+}
+.slider-scrollbar
+{
+	height: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+}
+
+.slider-scrollbar .scrollbar-track 
+{
+	height: 2px;
+	width: 100%;
+	background: #ccc;
+	position: relative;
+	border-radius: 4px;
+}
+
+.slider-scrollbar:hover .scrollbar-track
+{
+	height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb:active
+{
+ cursor: grabbing;
+ height: 8px;
+ top:-2px;
+}
+.slider-scrollbar .scrollbar-thumb
+{
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	background: #000;
+	border-radius: inherit;
+	cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb::after
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:-10px;
+	bottom: -10px;
+
+}
+.slide-wrapper
+{
+	position: relative;
+}
+.slide-wrapper button 
+{
+	top: 50%;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	color: #fff;
+	background: #000;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 50%;
+	transform: translateY(-50%);
+}
+.slide-wrapper button:hover
+{
+	background: #444;
+
+}
+
+.slide-wrapper button#prev-slide
+{
+	left: -20px;
+}
+
+.slide-wrapper button#next-slide
+{
+	right: -20px;
+}
+
+footer
+{
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	background: linear-gradient(to right, #050505, #487cea);
+	padding: 100px 0 30px;
+	border-top-left-radius: 125px;
+	border-top-right-radius: 125px;
+	margin-top: 40px;
+	color:#fff;
+}
+
+.footer-row
+{
+	width: 70%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.footer-col
+{
+	flex-basis: calc(100 / 3);
+	padding: 20px;
+}
+
+.footer-logo
+{
+	width: 200px;
+
+}
+.footer-contact ul li
+{
+	padding:10px 0px;
+	list-style-type: none;
+}
+
+.space
+{
+	margin-right: 10px;
+}
+.footer-send-social form
+{
+	padding-bottom: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+
+.far{
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.footer-send-social form input 
+{
+	width: 100%;
+	background: transparent;
+	color: #fff;
+	border: 0;
+	outline: none;
+}
+
+.footer-send-social form button
+{
+	background: transparent;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	transition: transform 0.3s;
+}
+.footer-send-social form button:hover
+{
+	transform: scale(1.2);
+	color:#22396d;
+    transition: transform 0.3s; 
+    cursor: pointer;
+}
+.footer-social a
+{
+	color: white;
+	transition: all 0.1s ease;
+}
+.footer-social a i
+{
+    transition: transform 0.3s;
+}
+
+
+.footer-social a i:hover
+{
+	transform: scale(1.2);
+	color:#22396d;
+    transition: transform 0.3s; 
+    cursor: pointer;
+}
+.big-far{
+	font-size: 36px;
+	margin-right: 10px;
+	margin-left: 13px;
+}
+
+.line
+{
+	border-top: solid 1px #686868 ;
+	opacity: 0.4;
+	margin-top: 30px;
+}
+.Copyright{
+    text-align: center;
+	font-size: 14px;
+	padding-top: 30px;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	  display: none;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+	background: #00acf0; 
+	border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+	background: #0164e6;
+	cursor:grab; 
+  }
